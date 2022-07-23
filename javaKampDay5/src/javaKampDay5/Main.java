@@ -33,6 +33,7 @@ public class Main {
 		
 		UserManager userManager = new UserManager(new HibernateUserDao(),new EmailSenderManager(), new jGoogleServiceAdapter());
 		userManager.signUp(user3);
+		userManager.login(user3);
 		
 
 	}

@@ -24,11 +24,6 @@ public class GameManager implements GameService{
 	{
 		System.out.println("Sistemdeki oyun güncellendi : " + game.getName());
 	}
-
-		public void update(Game game) 
-	{
-		System.out.println("Sistemdeki oyun silindi : " + game.getName());
-	}
 	
 	@Override
 	public void sell(Game game) 

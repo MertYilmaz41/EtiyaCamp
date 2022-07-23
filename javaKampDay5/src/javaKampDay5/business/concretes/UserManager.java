@@ -47,6 +47,22 @@ public class UserManager implements IUserService{
 	}
 	
 	@Override
+	public boolean login(User user) {
+		
+		if(mailVerification(user)==false) 
+		{
+			System.out.println("Giriþ baþarýlý.");
+			return true;
+		} 
+		else 
+		{
+			System.out.println("Giriþ baþarýsýz.");
+			return false;
+		}
+		
+	}
+	
+	@Override
 	public void update(User user) {
 		
 		userDao.update(user);
@@ -113,5 +129,9 @@ public class UserManager implements IUserService{
 			return false;
 		}
 	}
+
+
+
+
 
 }
