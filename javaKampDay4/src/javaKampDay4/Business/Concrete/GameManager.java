@@ -14,12 +14,12 @@ public class GameManager implements GameService{
 	{
 		this.campaignService = campaignService;
 	}
-	
+	@Override
 	public void add(Game game) 
 	{
 		System.out.println("Sisteme yeni oyun eklendi : " + game.getName());
 	}
-	
+	@Override
 	public void update(Game game) 
 	{
 		System.out.println("Sistemdeki oyun güncellendi : " + game.getName());
