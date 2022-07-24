@@ -31,7 +31,7 @@ public class UserManager implements IUserService{
 
 	@Override
 	public void signUp(User user) {
-		if(mailVerification(user)==true && passwordVerification(user)==true)
+		if(mailVerification(user)==true && passwordVerification(user)==true && nameVerification(user)==true)
 		{
 			emailList.add(user.getEmail());
 			this.emailSender.sendVerifyEmail();
@@ -43,6 +43,8 @@ public class UserManager implements IUserService{
 		{
 			this.emailSender.signUpIsFail();
 		}
+		
+		
 		
 	}
 	
@@ -80,7 +82,7 @@ public class UserManager implements IUserService{
 	}
 
 	
-	public boolean mailVerification(User user) {
+	private boolean mailVerification(User user) {
 		String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 		Pattern pattern = Pattern.compile(regex);
 
@@ -97,7 +99,7 @@ public class UserManager implements IUserService{
 	}
 
 	
-	public boolean passwordVerification(User user) {
+	private boolean passwordVerification(User user) {
 		String regex = "[0-9a-zA-Z]{6,}";
 		Pattern pattern = Pattern.compile(regex);
 
@@ -114,7 +116,7 @@ public class UserManager implements IUserService{
 	
 	
 	
-	public boolean nameVerification(User user) {
+	private boolean nameVerification(User user) {
 		String regex = "[0-9a-zA-Z]{6,}";
 		Pattern pattern = Pattern.compile(regex);
 

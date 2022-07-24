@@ -14,6 +14,7 @@ public class GameManager implements GameService{
 	{
 		this.campaignService = campaignService;
 	}
+	
 	@Override
 	public void add(Game game) 
 	{
