@@ -6,7 +6,7 @@ public class Balance {
 	
 	private int id;
 	private int customerId;
-	private Date dateOfStart;
+	private Date date;
 	private double amount;
 	
 	
@@ -16,10 +16,10 @@ public class Balance {
 	}
 
 
-	public Balance(int id, int customerId, Date dateOfStart, double amount) {
+	public Balance(int id, int customerId, Date date, double amount) {
 		this.id = id;
 		this.customerId = customerId;
-		this.dateOfStart = dateOfStart;
+		this.date = date;
 		this.amount = amount;
 	}
 
@@ -45,12 +45,12 @@ public class Balance {
 
 
 	public Date getDateOfStart() {
-		return dateOfStart;
+		return date;
 	}
 
 
-	public void setDateOfStart(Date dateOfStart) {
-		this.dateOfStart = dateOfStart;
+	public void setDateOfStart(Date date) {
+		this.date = date;
 	}
 
 
