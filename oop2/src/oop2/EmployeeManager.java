@@ -13,11 +13,10 @@ public class EmployeeManager {
 	
 	public void add(Customer customer) 
 	{
-		System.out.println("Customer added");
-		for (Logger logger : loggers) {
-			logger.log("eklendi.");
-		}
 		
+		System.out.println("Customer added");
+		runLoggers(customer);
+				
 	}
 	
 	public void update(Customer customer) 
@@ -26,6 +25,12 @@ public class EmployeeManager {
 		
 	}
 	
+	private void runLoggers(Customer customer) 
+	{
+		for (Logger logger : loggers) {
+			logger.log("data");
+		}
+	}
 }
 	
-
+//employee classýný açmayý unutma

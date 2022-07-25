@@ -26,8 +26,8 @@ public class Main {
 		
 		User user3 = new User();
 		user3.setId(3);
-		user3.setFirstName("Ýlker");
-		user3.setLastName("Kaya");
+		user3.setFirstName("Ýlkerlqw");
+		user3.setLastName("Kayallewq");
 		user3.setEmail("ilkerkaya@gmail.com");
 		user3.setPassword("123456");
 		

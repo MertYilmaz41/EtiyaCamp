@@ -31,7 +31,7 @@ public class UserManager implements IUserService{
 
 	@Override
 	public void signUp(User user) {
-		if(mailVerification(user)==true && passwordVerification(user)==true && nameVerification(user)==true)
+		if(mailVerification(user)==true && passwordVerification(user)==true && nameVerification(user)==false)
 		{
 			emailList.add(user.getEmail());
 			this.emailSender.sendVerifyEmail();

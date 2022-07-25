@@ -24,3 +24,10 @@ public class CustomerManager {
 		this.logger.log(customer.getFirstName());
 	}
 }
+
+//User,id,firstName,notificationMethod
+//UserList
+//user register
+//email,sms
+//user decides which notification method to be used
+//UserManager, register, forgotPassword
