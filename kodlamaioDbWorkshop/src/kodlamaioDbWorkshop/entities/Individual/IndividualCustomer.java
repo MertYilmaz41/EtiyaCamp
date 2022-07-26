@@ -1,13 +1,16 @@
 package kodlamaioDbWorkshop.entities.Individual;
 
+
 import kodlamaioDbWorkshop.entities.BaseClasses.Canal;
 import kodlamaioDbWorkshop.entities.BaseClasses.Customer;
+import kodlamaioDbWorkshop.entities.BaseClasses.FinancialAction;
 
 public class IndividualCustomer extends Customer{
 	
 	private String firstName;
 	private String lastName;
 	private String nationalityId;
+	private FinancialAction financialAction;
 
 	
 	public IndividualCustomer() 
@@ -17,11 +20,12 @@ public class IndividualCustomer extends Customer{
 
 
 	public IndividualCustomer(int id, String customerNo, Canal canal, String firstName, String lastName,
-			String nationalityId) {
+			String nationalityId, FinancialAction financialAction) {
 		super(id, customerNo, canal);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.nationalityId = nationalityId;
+		this.financialAction = financialAction;
 	}
 
 
@@ -30,9 +34,13 @@ public class IndividualCustomer extends Customer{
 	}
 
 
+
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
+
 
 
 	public String getLastName() {
@@ -40,9 +48,13 @@ public class IndividualCustomer extends Customer{
 	}
 
 
+
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+
 
 
 	public String getNationalityId() {
@@ -50,9 +62,27 @@ public class IndividualCustomer extends Customer{
 	}
 
 
+
+
 	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
 	}
+
+
+
+
+	public FinancialAction getFinancialAction() {
+		return financialAction;
+	}
+
+
+
+
+	public void setFinancialAction(FinancialAction financialAction) {
+		this.financialAction = financialAction;
+	}
+
+
 
 	
 

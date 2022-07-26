@@ -3,7 +3,7 @@ package kodlamaioDbWorkshop.entities.BaseClasses;
 public class Canal {
 
 	 private int id;
-	    private String name;
+	 private String name;
 
 	    public Canal() {
 	    }
